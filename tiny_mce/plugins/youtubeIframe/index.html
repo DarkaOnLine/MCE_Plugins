@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF8">
+            <title>{#youtube_dlg.title}</title>
+            <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+            <script type="text/javascript" src="js/youtube.js"></script>
+            <style>
+                li {list-style: none;}
+                .share-embed-size-list{}
+                .share-embed-size-list {
+                    min-width: 500px;
+                    overflow: visible;
+                }
+                .share-embed-size {
+                    border: 1px solid #FFFFFF;
+                    cursor: pointer;
+                    float: left;
+                    margin: 4px;
+                    padding: 4px;
+                }
+                .share-embed-size > label {
+                    display: block;
+                    text-align: center;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+                .share-embed-size-radio {
+                    display: none;
+                }
+
+                body, button, input, textarea {
+                    font: 12px arial,sans-serif;
+                }
+                .share-embed-size .share-embed-size-name {
+                    color: #666666;
+                    display: block;
+                    white-space: nowrap;
+                }
+                .share-embed-size .share-embed-size-box {
+                    background: none repeat scroll 0 0 #DDDDDD;
+                    border: 1px solid #999999;
+                    display: block;
+                    margin: auto 0;
+                    padding: 1px;
+                }
+                .share-embed-size.default .share-embed-size-box {
+                    height: 32px;
+                    margin-left: 4px;
+                    width: 42px;
+                }
+                .share-embed-size.default.wide .share-embed-size-box {
+                    height: 27px;
+                    width: 49px;
+                }
+                .share-embed-size.medium.wide .share-embed-size-box {
+                    height: 31px;
+                    width: 56px;
+                }
+                .share-embed-size.large.wide .share-embed-size-box {
+                    height: 35px;
+                    width: 64px;
+                }
+                .share-embed-size.hd720.wide .share-embed-size-box {
+                    height: 42px;
+                    width: 75px;
+                }
+
+
+                .share-embed-size.custom {
+                    text-align: right;
+                }
+                .share-embed-size {
+                    border: 1px solid #FFFFFF;
+                    cursor: pointer;
+                    float: left;
+                    margin: 4px;
+                    padding: 4px;
+                }
+                .share-embed-customize {
+                    padding: 0.5em;
+                }
+                .share-embed-size.custom .share-embed-customize li {
+                    margin: 0.25em;
+                }
+            </style>
+    </head>
+    <body>
+
+        <form onsubmit="YoutubeDialog.insert();return false;" action="#">
+            <p><label for="youtubeURL">{#youtube_dlg.url_field}</label>
+                <input id="youtubeURL" name="youtubeURL" type="text" class="text" style="width:100%" /></p>
+
+
+
+            <ul class="share-embed-size-list">
+                <li class="share-embed-size default wide">
+                    <label>
+                        <input type="radio" data-height="315" data-width="560" class="share-embed-size-radio " value="default" name="share-embed-size">
+                            <span class="share-embed-size-name">560 × 315</span>
+                            <span class="share-embed-size-box default"></span>
+                    </label>
+                </li>
+                <li class="share-embed-size medium wide">
+                    <label>
+                        <input type="radio" data-height="360" data-width="640" class="share-embed-size-radio " value="medium" name="share-embed-size">
+                            <span class="share-embed-size-name">640 × 360</span>
+                            <span class="share-embed-size-box medium"></span>
+                    </label>
+                </li>
+                <li class="share-embed-size large wide">
+                    <label>
+                        <input type="radio" data-height="480" data-width="853" class="share-embed-size-radio " value="large" name="share-embed-size">
+                            <span class="share-embed-size-name">853 × 480</span>
+                            <span class="share-embed-size-box large"></span>
+                    </label>
+                </li>
+                <li class="share-embed-size hd720 wide selected">
+                    <label>
+                        <input type="radio" data-height="720" data-width="1280" class="share-embed-size-radio  hd" value="hd720" name="share-embed-size">
+                            <span class="share-embed-size-name">1280 × 720</span>
+                            <span class="share-embed-size-box hd720"></span>
+                    </label>
+                </li>
+
+                <li class="share-embed-size custom">
+                    <label>
+                        <input type="radio" data-height="-1" data-width="-1" class="share-embed-size-radio share-embed-size-radio-custom" value="custom" name="share-embed-size">
+                            <span class="share-embed-size-name">
+                                Custom
+                            </span>
+                    </label>
+                    <ul class="share-embed-customize">
+                        <li>
+                            <label>
+                                Width:
+                                <input type="text" maxlength="4" class="yt-uix-form-input-text share-embed-size-custom-width"> px
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                Height:
+                                <input type="text" maxlength="4" class="yt-uix-form-input-text share-embed-size-custom-height"> px
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+
+
+            <div class="mceActionPanel">
+                <input type="button" id="insert" name="insert" value="{#insert}" onclick="YoutubeDialog.insert();" />
+                <input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+            </div>
+        </form>
+
+    </body>
+</html>
