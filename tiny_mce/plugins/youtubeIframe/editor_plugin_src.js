@@ -1,18 +1,18 @@
 /**
- * editor_plugin_src.js
- *
- * Copyright 2009, Moxiecode Systems AB
  * Released under LGPL License.
  *
  * License: http://tinymce.moxiecode.com/license
  * Contributing: http://tinymce.moxiecode.com/contributing
+ * 
+ * @name editor_plugin_src
+ * @author Darius Matulionis <darius@matulionis.lt>
  */
 
 (function () {
     // Load plugin specific language pack
-    tinymce.PluginManager.requireLangPack('youtube');
-
-    tinymce.create('tinymce.plugins.YoutubePlugin', {
+    tinymce.PluginManager.requireLangPack('youtubeIframe');
+   
+    tinymce.create('tinymce.plugins.YoutubeIframePlugin', {
         /**
         * Initializes the plugin, this will be executed after the plugin has been created.
         * This call is done before the editor instance has finished it's initialization so use the onInit event
@@ -23,11 +23,12 @@
         */
         init: function (ed, url) {
             // Register the command so that it can be invoked by using tinyMCE.activeEditor.execCommand('mceExample');
-            ed.addCommand('mceYoutube', function () {
+            ed.addCommand('mceYoutubeIframe', function () {
+                
                 ed.windowManager.open({
-                    file: url + '/youtube.htm',
-                    width: 320 + parseInt(ed.getLang('example.delta_width', 0)),
-                    height: 120 + parseInt(ed.getLang('example.delta_height', 0)),
+                    file: url + '/index.html',
+                    width: 650,
+                    height: 350,
                     inline: 1
                 }, {
                     plugin_url: url, // Plugin absolute URL
@@ -36,10 +37,10 @@
             });
 
             // Register example button
-            ed.addButton('youtube', {
-                title: 'youtube.desc',
-                cmd: 'mceYoutube',
-                image: url + '/img/youtube.gif'
+            ed.addButton('youtubeIframe', {
+                title: 'youtubeIframe.desc',
+                cmd: 'mceYoutubeIframe',
+                image: url + '/img/youtube.png'
             });
 
             // Add a node change handler, selects the button in the UI when a image is selected
@@ -55,7 +56,7 @@
                     catch (err) {
                     }
                 }
-                cm.setActive('youtube', active);
+                cm.setActive('youtubeIframe', active);
             });
         },
 
@@ -73,23 +74,17 @@
             return null;
         },
 
-        /**
-        * Returns information about the plugin as a name/value array.
-        * The current keys are longname, author, authorurl, infourl and version.
-        *
-        * @return {Object} Name/value array containing information about the plugin.
-        */
         getInfo: function () {
             return {
-                longname: 'Youtube plugin',
-                author: 'travelogie.com',
-                authorurl: 'http://travelogie.com',
-                infourl: 'http://travelogie.com/blog',
-                version: "1.0"
+                longname: 'Youtube Iframe PlugIn',
+                author: 'Darius Matulionis',
+                authorurl: 'http://matulionis.lt',
+                infourl: 'darius@matulionis.lt',
+                version: "1.1"
             };
         }
     });
 
     // Register plugin
-    tinymce.PluginManager.add('youtube', tinymce.plugins.YoutubePlugin);
+    tinymce.PluginManager.add('youtubeIframe', tinymce.plugins.YoutubeIframePlugin);
 })();
