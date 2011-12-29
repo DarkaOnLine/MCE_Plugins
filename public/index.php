@@ -50,31 +50,31 @@
             <div class="footer">
                 &copy; <?= date("Y") ?> Darius Matulionis	
             </div>
-			<div style="clear:boath; height:10px;">
-			<div>
-				<script type="text/javascript"><!--
-					google_ad_client = "ca-pub-2497302860736939";
-					/* Long darka.lt */
-					google_ad_slot = "9190202264";
-					google_ad_width = 728;
-					google_ad_height = 90;
-					//-->
-					</script>
-					<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				</script>
-			</div>
-        </div>
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-762709-12']);
-	  _gaq.push(['_trackPageview']);
+            <div style="clear:boath; height:10px;">
+                <div>
+                    <script type="text/javascript"><!--
+                        google_ad_client = "ca-pub-2497302860736939";
+                        /* Long darka.lt */
+                        google_ad_slot = "9190202264";
+                        google_ad_width = 728;
+                        google_ad_height = 90;
+                        //-->
+                    </script>
+                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-762709-12']);
+                _gaq.push(['_trackPageview']);
 
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
 
-	</script>
+            </script>
     </body>
 </html>
