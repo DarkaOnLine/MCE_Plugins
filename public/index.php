@@ -48,10 +48,21 @@
                 <div id="testArea"></div>
             </div>
             <div class="footer">
-
                 &copy; <?= date("Y") ?> Darius Matulionis	
             </div>
-
+			<div style="clear:boath; height:10px;">
+			<div>
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-2497302860736939";
+					/* Long darka.lt */
+					google_ad_slot = "9190202264";
+					google_ad_width = 728;
+					google_ad_height = 90;
+					//-->
+					</script>
+					<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
         </div>
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
