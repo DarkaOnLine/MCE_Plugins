@@ -53,12 +53,13 @@ var YoutubeDialog = {
         }
         
         //Codes
-        var iFrame = '<iframe width="'+width+'" height="'+height+'" src="http://www.youtube.com/embed/'+code+'" frameborder="0" allowfullscreen></iframe>';
+        var iFrame = '<iframe width="'+width+'" height="'+height+'" src="http://www.youtube.com/embed/'+code+'?wmode=transparent" frameborder="0" allowfullscreen></iframe>';
         var embeded = '\
         <object width="'+width+'" height="'+height+'">\n\
             <param name="movie" value="http://www.youtube.com/v/'+code+'?version=3&amp;hl=en_US"></param>\n\
             <param name="allowFullScreen" value="true"></param>\n\
             <param name="allowscriptaccess" value="always"></param>\n\
+            <param name="wmode" value="transparent"></param>\n\
             <embed src="http://www.youtube.com/v/'+code+'?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="'+width+'" height="'+height+'" allowscriptaccess="always" allowfullscreen="true"></embed>\n\
         </object>';
         
